@@ -3,7 +3,7 @@
 Overall document style
 */
 
-@import url('resources/fonts/dejavu.css');
+/*@import url('resources/fonts/dejavu.css');*/
 
 body {
     background-color:#ffffff;
@@ -571,4 +571,9 @@ div.block div.block span.interfaceName {
 
 div.contentContainer ul.blockList li.blockList h2{
     padding-bottom:0px;
+}
+.logo{
+    content: url(img/forge_logo.png);
+    height: 20%;
+    width: 25%;
 }
