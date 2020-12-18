@@ -37,14 +37,14 @@ function loadScripts(doc, tag) {
     }
     createElem(doc, tag, 'search.js');
     
-    $.get(pathtoroot + "module-search-index.zip")
+    /*$.get(pathtoroot + "module-search-index.zip")
             .done(function() {
                 JSZipUtils.getBinaryContent(pathtoroot + "module-search-index.zip", function(e, data) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     moduleSearchIndex = JSON.parse(zip.file("module-search-index.json").asText());
                 });
-            });
+            });*/
     $.get(pathtoroot + "package-search-index.zip")
             .done(function() {
                 JSZipUtils.getBinaryContent(pathtoroot + "package-search-index.zip", function(e, data) {
@@ -69,17 +69,17 @@ function loadScripts(doc, tag) {
                     memberSearchIndex = JSON.parse(zip.file("member-search-index.json").asText());
                 });
             });
-    $.get(pathtoroot + "tag-search-index.zip")
+    /*$.get(pathtoroot + "tag-search-index.zip")
             .done(function() {
                 JSZipUtils.getBinaryContent(pathtoroot + "tag-search-index.zip", function(e, data) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     tagSearchIndex = JSON.parse(zip.file("tag-search-index.json").asText());
                 });
-            });
-    if (!moduleSearchIndex) {
+            });*/
+    /*if (!moduleSearchIndex) {
         createElem(doc, tag, 'module-search-index.js');
-    }
+    }*/
     if (!packageSearchIndex) {
         createElem(doc, tag, 'package-search-index.js');
     }
@@ -89,9 +89,9 @@ function loadScripts(doc, tag) {
     if (!memberSearchIndex) {
         createElem(doc, tag, 'member-search-index.js');
     }
-    if (!tagSearchIndex) {
+    /*if (!tagSearchIndex) {
         createElem(doc, tag, 'tag-search-index.js');
-    }
+    }*/
     $(window).resize(function() {
         $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
     });
