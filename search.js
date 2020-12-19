@@ -124,7 +124,7 @@ $.widget("custom.catcomplete", $.ui.autocomplete, {
         });
     },
     _renderItem: function(ul, item) {
-        var label = ""; 
+        var label = "";
         if (item.category === catModules) {
             label = getHighlightedText(item.l);
         } else if (item.category === catPackages) {
